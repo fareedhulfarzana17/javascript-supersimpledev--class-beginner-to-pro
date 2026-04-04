@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      lesson-8(8h)(calculatorproject)
+    </title>
+  </head>
+  <p>from the 7j exercise calculator project  i need to add localstorage using setItem() and getItem() </p>
+  <body>
+    <p>
+     <button onclick="updateCalculation(1)">1</button>
+     <button  onclick="updateCalculation(2)">2</button>
+    <button  onclick="updateCalculation(3)">3</button>
+     </p>
+     <p>
+     <button onclick="updateCalculation(4)">4</button>
+     <button  onclick="updateCalculation(5)">5</button>
+    <button  onclick="updateCalculation(6)">6</button>
+     </p>
+     <p>
+     <button onclick="updateCalculation(7)">7</button>
+     <button  onclick="updateCalculation(8)">8</button>
+    <button  onclick="updateCalculation(9)">9</button>
+     </p>
+     <p>
+     <button  onclick="updateCalculation(0)">0</button>
+     <button  onclick="updateCalculation(' + ')">+</button>
+      <button  onclick="updateCalculation(' - ')">-</button>
+     </p>
+     <p>
+     <button  onclick="updateCalculation(' * ')">*</button>
+     <button  onclick="updateCalculation(' / ')">/</button>
+      <button  onclick="console.log(eval(a)),localStorage.setItem('calculation',a)">=</button>
+     </p>
+     <p> <button  onclick="updateCalculation('.')">.</button>
+      </p>
+      <p>
+
+       <button  onclick="console.log(a=''),localStorage.setItem('calculation',a)">reset</button>
+    
+    </p>
+     
+     
+  </body>
+  <script>
+    
+    let a=localStorage.getItem('calculation') ||'';
+    function updateCalculation(value){
+      a+=value;
+      console.log(a);
+      localStorage.setItem('calculation', a);
+      
+     
+    }
+    
+  </script>
+</html>

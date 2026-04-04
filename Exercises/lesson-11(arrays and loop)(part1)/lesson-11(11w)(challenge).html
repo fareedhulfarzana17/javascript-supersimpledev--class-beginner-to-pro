@@ -1,0 +1,93 @@
+<html>
+<head>
+  
+  <title>lesson-11(11w)</title>
+</head>
+<body>
+  
+  <script>
+    function findindex(array,word){
+      let index=-1;
+      for(let i=0;i<=array.length;i++){
+        if(array[i]===word){
+          console.log(i)
+        }
+      }
+      console.log(index)
+
+    }
+    findindex(['red','blue','pink'],'pink')
+
+//     function unique(array)
+    
+//     {
+      
+//       let newarray=[];
+      
+//       for(let i=0;i<array.length;i++)//0to4
+//       {
+//         for(let j=1;j<array.length;j++)//1to4
+//         {
+//           if(array[0]===array[i]){//red=green
+//             continue;
+//           }
+//           newarray.push(array[i]);
+// //['red','green','yellow','red','green']
+
+//         }
+    
+     
+//         console.log()
+       
+//       }
+
+
+      
+      
+      
+//       console.log(newarray)
+//       console.log()
+    
+//     }
+//     unique(['red','green','yellow','red','green'])
+
+
+function unique(array)
+    
+    {
+      
+      let newarray=[];
+      
+      for(let i=0;i<array.length;i++)//0to4
+      {
+        
+          if(newarray.indexOf(array[i])=== -1)
+        {
+          newarray.push(array[i]);
+        }
+         
+          
+
+
+        }
+    
+     
+        console.log(newarray)
+        
+       
+      }
+
+
+      
+      
+      
+      
+    
+  
+    unique(['red','green','yellow','red','green','blue','black','blue'])
+   
+ 
+  </script>
+  
+</body>
+</html>

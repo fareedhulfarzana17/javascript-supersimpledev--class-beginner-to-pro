@@ -1,0 +1,27 @@
+<html>
+<head>
+  
+  <title>lesson-12(12c)</title>
+</head>
+<body>
+  in this i just need to create a button when clicking after 1 sec the text should be change to submit to finished!
+  <button class="jsbuttonclass" >Submit</button>
+  <script>
+    let buttonElement=document.querySelector(".jsbuttonclass");
+    buttonElement.addEventListener('click',buttonchange);
+
+    function buttonchange(){
+      setTimeout(()=>{
+         buttonElement.innerHTML="Finished!"
+
+      },1000)
+     
+
+    }
+    
+   
+   
+  </script>
+  
+</body>
+</html>

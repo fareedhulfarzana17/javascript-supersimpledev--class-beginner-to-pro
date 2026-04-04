@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>lesson-10(10f)</title>
+  </head>
+
+
+
+
+<style>
+    .is-toggled{
+      background-color: black;
+      
+      padding:10px 20px;
+      width:200px;
+      font-weight:bolder;
+      cursor:pointer;
+      border-radius: 5px;
+      border-style: none;
+      color:white;
+
+
+    }
+    .default{
+       background-color: rgb(24px 24px 24px);
+      
+      padding:10px 20px;
+      width:200px;
+      font-weight:bolder;
+      border-radius: 5px;
+      cursor:pointer;
+      border-style: none;
+      margin:20px;
+
+    }
+   
+  </style>
+  <body>
+    <p>this is the same continuetion from before just separate the files in here nd use function i already done that before  and i dont want to separte because tis is the exercise only right?</p>
+    <button class="default button1" onclick="clickcheck('button1')">
+      Gaming
+    </button>
+      <button class="default button2" onclick="clickcheck('button2')">
+      Music
+    </button>
+     <button class="default button3" onclick="clickcheck('button3')">
+      Tech
+    </button>
+    
+
+    <script>
+      function clickcheck(value){
+        if(value==='button1')
+        {
+          let istoggledElement=document.querySelector('.button1');
+      
+          let check=istoggledElement.classList.contains('is-toggled');
+          
+              if(check===false){
+                istoggledElement.classList.add('is-toggled');
+                
+
+
+              }
+              else{
+                istoggledElement.classList.remove('is-toggled');
+                
+
+              }
+
+          }
+       
+       else if(value==='button2')
+       {
+          let istoggledElement=document.querySelector('.button2');
+      
+          let check=istoggledElement.classList.contains('is-toggled');
+          
+              if(check===false){
+                istoggledElement.classList.add('is-toggled');
+                
+
+
+              }
+              else{
+                istoggledElement.classList.remove('is-toggled');
+                
+
+              }
+
+       }
+        else if(value==='button3'){
+           let istoggledElement=document.querySelector('.button3');
+      
+          let check=istoggledElement.classList.contains('is-toggled');
+          
+              if(check===false){
+                istoggledElement.classList.add('is-toggled');
+                
+
+
+              }
+              else{
+                istoggledElement.classList.remove('is-toggled');
+                
+
+              };
+
+          
+        }
+          else
+          {
+            alert('choose one button')
+          };
+      
+      };
+
+
+    </script>
+  </body>
+</html> 
+
+
+   

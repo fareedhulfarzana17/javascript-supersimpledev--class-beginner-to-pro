@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>dom-projects</title>
+    
+  </head>
+  <style>
+      .css-button{
+        border-style: none;
+        border-radius: 50px;
+        background-color: black;
+        color:white;
+        padding:15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        cursor: pointer;
+        font-weight:bold;
+      }
+      .aftersubscribed{
+        background-color: rgb(233, 228, 228);
+        color:black;
+        
+      }
+      .amazoninputClass{
+        font-size: 15px;
+        padding:10px;
+       
+        
+      }
+      .calculateButtonClass{
+        padding:12px;
+        font-size: 15px;
+        background-color: green;
+        color:white;
+        border-style: none;
+        padding-left:15px;
+        padding-right:15px;
+        cursor: pointer;
+        
+
+      }
+
+
+    </style>
+  <body>
+    <h3>Youtube Subscribe Button</h3>
+    <button class="js-button  css-button" onclick="subscribed()">Subscribe</button>
+    <h3>rock paper scissors game!</h3>
+    <a href="Rock-paper-scissors.html">click here!</a>
+    <h3>
+      Amazon Shipping Calculator <br>
+      Orders under $40=+$10 Shipping<br>
+      Orders over $40=FREE Shipping
+    </h3>
+    <input class="amazoninputClass" placeholder="Cost of orders" onkeydown="handlekeydownfunction(event)"
+    >
+    <button onclick="amazonCalculator()" class="calculateButtonClass">Calculate</button>
+    <h3 class="amazonResult"></h3>
+
+
+
+
+    <script>
+      function handlekeydownfunction(event)
+      {
+        if(event.key==='Enter')
+        {
+          amazonCalculator()
+        }
+      };
+
+      //amazon function
+      function amazonCalculator(){
+        
+      let amazoninputClassElement=document.querySelector('.amazoninputClass');
+      let inputvalue=amazoninputClassElement.value
+       let amazonResultElement=document.querySelector('.amazonResult');
+
+      if(inputvalue<=40){
+        let newvalue=Number(inputvalue)+10;
+        amazonResultElement.innerText=`$${newvalue} with shipping`;
+       
+      }
+      else{
+         amazonResultElement.innerText=`$${amazoninputClassElement.value} with FREE shipping`;
+
+      };
+    };
+      
+    //youtube subscribe function
+
+      function subscribed()
+      {
+              let buttonElement=document.querySelector(".js-button");
+
+              if(buttonElement.innerText==="Subscribe"){
+                buttonElement.innerText="Subscribed";
+                buttonElement.classList.add('aftersubscribed');
+              }
+              else{
+                buttonElement.innerText="Subscribe";
+                buttonElement.classList.remove('aftersubscribed');
+              }
+
+              
+              
+
+              
+      
+              
+        }
+    </script>
+  </body>
+</html>

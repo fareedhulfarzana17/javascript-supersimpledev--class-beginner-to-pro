@@ -1,0 +1,27 @@
+<html>
+<head>
+  
+  <title>lesson-11(11c)</title>
+</head>
+<body>
+  
+  <script>
+    function arraySwap(array){
+      let lastValue=array[array.length-1]
+   
+      let firstValue=array[0];
+      array[0]=lastValue;
+      array[array.length-1]=firstValue;
+
+
+      return array;
+      
+
+    }
+    console.log(arraySwap([11,22,56,2,66]));
+    console.log(arraySwap(['hi','apple','box','boy','world']));
+ 
+  </script>
+  
+</body>
+</html>

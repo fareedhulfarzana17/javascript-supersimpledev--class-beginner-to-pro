@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>simple cart project</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+        <h1>iam so proud i done it by my self in sake of allah</h1>
+        <h1>cart quantity</h1>
+        <button id="show" onclick="showfun()">show quantity</button>
+        <button id="add" onclick="addfun()">add to cart</button>
+        <button id="two" onclick="twofun()">+2</button>
+        <button id="three"onclick="threefun()">+3</button>
+        <button id="reset"onclick="resetfun()">reset cart</button>
+
+
+
+
+
+
+        <script>
+            var showvar=document.getElementById("show");
+            var addvar=document.getElementById("add");
+            var twovar=document.getElementById("two");
+            var threevar=document.getElementById("three");
+            var resetvar=document.getElementById("reset");
+            a=0;
+            
+            function showfun(){
+                console.log("cart quantity:",a);
+            }
+             function addfun(){
+                console.log("cart quantity:",a=a+1);
+            }
+             function twofun(){
+                console.log("cart quantity:",a=a+2);
+            }
+             function threefun(){
+                console.log("cart quantity:",a=a+3);
+            }
+             function resetfun(){
+                 console.log("cart was resetted");
+                console.log("cart quantity:",a=0);
+            }
+
+        </script>
+    </body>
+</html>
+

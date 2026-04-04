@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <title>Rock-paper-scissors</title>
+  </head>
+  <body>
+    <p>ROCK PAPER SCISSORS</p>
+    <button onclick="playGame('ROCK')">rock</button>
+    <button onclick="playGame('PAPER')">paper</button>
+    <button onclick="playGame('SCISSORS')">scissors</button>
+    <br>
+    <h3 class="result"></h3>
+    
+
+    <button 
+    onclick="
+    remove()
+    "
+    >
+      RESET
+    </button>
+
+
+
+
+
+
+
+
+
+    <script>
+      let randomNumber=0;
+      console.log(randomNumber)
+      let computer='';
+      let resultclass=document.querySelector('.result')
+    
+      let score=JSON.parse(localStorage.getItem('localScore'))||{
+        win:0,
+        lose:0,
+        tie:0
+      }
+
+      function computerchoose(){
+      if(randomNumber<=3){
+        computer='ROCK'
+        console.log(`computer choose:${computer}`)
+
+      }
+      else if(randomNumber>3 && randomNumber<=6){
+        computer='PAPER';
+        console.log(`computer choose:${computer}`)
+
+      }
+      else{
+        computer='SCISSORS';
+        console.log(`computer choose:${computer}`)
+
+      }
+    }
+    function scoreNumber(){
+      `scores:win:${score.win},loses:${score.lose},ties:${score.tie}`
+    }
+    function playGame(user){
+      
+        randomNumber=Math.floor(Math.random()*10)
+        computerchoose();
+        
+if(user==='ROCK')
+{
+      if(computer==='ROCK'){
+      score.tie+=1;
+      resultclass.innerText=` you picked:${user}
+              computer picked:${computer}
+              its a tie game`
+              scoreNumber()
+              
+
+
+      }
+      else if(computer === 'PAPER'){
+      score.lose+=1;
+      resultclass.innerText=` you picked:${user}
+              computer picked:${computer}
+              you lose the  game 
+              `
+              scoreNumber();
+             
+
+
+      }
+      else if(computer === 'SCISSORS'){
+      score.win+=1;
+        resultclass.innerText=` you picked:${user}
+                computer picked:${computer}
+                you win the  game 
+                `
+                scoreNumber();
+                
+
+
+      }
+      else {
+        resultclass.innerText=`invalid`
+      }
+      localStorage.setItem('localScore',JSON.stringify(score));
+
+
+}
+
+else if(user==='PAPER')
+{
+      if(computer==='PAPER'){
+      score.tie+=1;
+      resultclass.innerText=`you picked:${user}
+              computer picked:${computer}
+              its a tie game 
+              `
+              scoreNumber();
+              
+
+      }
+      else if(computer === 'ROCK'){
+      score.win+=1;
+      resultclass.innerText=`you picked:${user}
+              computer picked:${computer}
+              you win the  game 
+              `
+              scoreNumber();
+              
+
+
+      }
+      else if(computer === 'SCISSORS'){
+      score.lose+=1;
+        resultclass.innerText=`you picked:${user}
+                computer picked:${computer}
+                you lose the  game 
+                `
+                scoreNumber();
+                
+
+
+      }
+      else {
+      resultclass.innerText=`invalid`
+      }
+      localStorage.setItem('localScore',JSON.stringify(score))
+
+}
+else
+{
+      if(computer==='SCISSORS'){
+      score.tie+=1;
+      resultclass.innerText=`you picked:${user}
+              computer picked:${computer}
+              its a tie game 
+              `
+              scoreNumber();
+              
+
+      }
+      else if(computer === 'ROCK'){
+      score.lose+=1;
+      resultclass.innerText=`you picked:${user}
+              computer picked:${computer}
+              you lose the  game 
+              `
+              scoreNumber();
+              
+
+
+      }
+      else if(computer === 'PAPER'){
+      score.win+=1;
+        resultclass.innerText=`you picked:${user}
+                computer picked:${computer}
+                you win the  game 
+                `
+                scoreNumber();
+                
+
+
+      }
+      else {
+      resultclass.innerText=`invalid`
+      }
+      localStorage.setItem('localScore',JSON.stringify(score))
+
+      }
+}
+let localScore='';
+function remove(){
+  
+  localStorage.removeItem(localScore)
+    score.win=0;
+    score.lose=0;
+    score.tie=0;
+    resultclass.innerText=`score was resetted!!`
+              
+              scoreNumber();
+                
+
+
+
+}
+
+
+
+
+      
+
+        
+        
+      
+       
+     
+       
+    </script>
+  </body>
+</html>

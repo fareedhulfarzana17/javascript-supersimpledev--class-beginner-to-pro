@@ -1,0 +1,286 @@
+<html>
+  <head>
+    <title>Rock-paper-scissors wth css</title>
+  </head>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: black;
+      color:white;
+    }
+    .titleClass{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 50px;
+    }
+    .moveIcon{
+      
+     
+     
+      
+     
+      background-color:transparent;
+      border-color: white;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 200px;
+      text-align: center;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 20px;
+
+      
+      
+    }
+    .move-icon{
+       background-color:transparent;
+       width:70px;
+       height:70px;
+       margin-bottom: 20px;
+      
+      
+
+    }.resetClass{
+      
+      border-style: none;
+      font-size: 15px;
+      font-weight: bolder;
+      padding:20px 10px;
+      width: 150px;
+    }
+    .scoreClass{
+      font-size: 20px;
+      font-weight: bolder;
+
+    }
+  </style>
+  <body>
+    <p class="titleClass">ROCK PAPER SCISSORS</p>
+    <button onclick="playGame('ROCK')" class="moveIcon"><img src="img/rock.png " width="100px" height="100px"></button>
+    <button onclick="playGame('PAPER')"class="moveIcon"><img src="img/paper.png " width="100px" height="100px"></button>
+    <button onclick="playGame('SCISSORS')"class="moveIcon"><img src="img/scissors.png " width="100px" height="100px"></button>
+    <br>
+    
+    <h3 class="result"></h3>
+    <p class="scoreClass"></p>
+    
+
+    <button 
+    onclick="
+    remove()
+    "
+    class="resetClass">
+      RESET
+    </button>
+   
+
+
+
+
+
+
+
+
+
+    <script>
+      let scoreClassElement=document.querySelector('.scoreClass')
+      let randomNumber=0;
+      console.log(randomNumber)
+      let Computer='';
+      let resultclass=document.querySelector('.result')
+    
+      let score=JSON.parse(localStorage.getItem('localScore'))||{
+        win:0,
+        lose:0,
+        tie:0
+      }
+
+      function Computerchoose(){
+      if(randomNumber<=4){
+        Computer='ROCK'
+        console.log(`Computer choose:${Computer}`)
+
+      }
+      else if(randomNumber>4 && randomNumber<6){
+        Computer='PAPER';
+        console.log(`Computer choose:${Computer}`)
+
+      }
+      else{
+        Computer='SCISSORS';
+        console.log(`Computer choose:${Computer}`)
+
+      }
+    }
+    function scoreNumber(){
+      scoreClassElement.innerHTML=`Wins:${score.win}<br>Losses:${score.lose}<br>Ties:${score.tie}`
+      
+    }
+    function playGame(user){
+      
+        randomNumber=Math.floor(Math.random()*10)
+        Computerchoose();
+        
+if(user==='ROCK')
+{
+      if(Computer==='ROCK'){
+      score.tie+=1;
+      resultclass.innerHTML=
+              `You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+              its a tie game`
+
+              
+
+
+      }
+      else if(Computer === 'PAPER'){
+      score.lose+=1;
+      resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+              You lose the  game 
+              `
+              scoreNumber();
+             
+
+
+      }
+      else if(Computer === 'SCISSORS'){
+      score.win+=1;
+        resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+                You win the  game `
+                
+                scoreNumber();
+                
+
+
+      }
+      else {
+        resultclass.innerHTML=`invalid`
+      }
+      localStorage.setItem('localScore',JSON.stringify(score));
+
+
+}
+
+else if(user==='PAPER')
+{
+      if(Computer==='PAPER'){
+      score.tie+=1;
+      resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+              its a tie game 
+              `
+              scoreNumber();
+              
+
+      }
+      else if(Computer === 'ROCK'){
+      score.win+=1;
+      resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+              You win the  game 
+              `
+              scoreNumber();
+              
+
+
+      }
+      else if(Computer === 'SCISSORS'){
+      score.lose+=1;
+        resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+                You lose the  game 
+                `
+                scoreNumber();
+                
+
+
+      }
+      else {
+      resultclass.innerHTML=`invalid`
+      }
+      localStorage.setItem('localScore',JSON.stringify(score))
+
+}
+else
+{
+      if(Computer==='SCISSORS'){
+      score.tie+=1;
+      resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+              its a tie game 
+              `
+              scoreNumber();
+              
+
+      }
+      else if(Computer === 'ROCK'){
+      score.lose+=1;
+      resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+              You lose the  game 
+              `
+              scoreNumber();
+              
+
+
+      }
+      else if(Computer === 'PAPER'){
+      score.win+=1;
+        resultclass.innerHTML=`You <img src="img/${user}.png " width="100px" height="100px" class='move-Icon'>
+              <img src="img/${Computer}.png " width="100px" height="100px"class='move-Icon'>Computer
+              <br><br>
+                You win the  game 
+                `
+                scoreNumber();
+                
+
+
+      }
+      else {
+      resultclass.innerHTML=`invalid`
+      }
+      localStorage.setItem('localScore',JSON.stringify(score))
+
+      }
+}
+let localScore='';
+function remove(){
+  scoreNumber()
+  
+  localStorage.removeItem(localScore)
+    score.win=0;
+    score.lose=0;
+    score.tie=0;
+    resultclass.innerHTML=`score was resetted!!`
+              
+              
+                
+
+
+
+}
+
+
+
+
+      
+
+        
+        
+      
+       
+     
+       
+    </script>
+  </body>
+</html>

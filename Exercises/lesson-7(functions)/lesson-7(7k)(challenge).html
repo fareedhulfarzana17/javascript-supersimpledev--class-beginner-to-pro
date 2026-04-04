@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-7(7k)(challenge)</title>
+</head>
+<body>
+  <p>
+    in this i need to use function in the 6l cart project but i dont know how to do it
+
+  </p>
+  <p> yeah i have figured out this exercise this is finished and working</p>
+
+<h1>cart quantity</h1>
+        <button onclick="showfun()">show quantity</button>
+        <button 
+        onclick="update(1)">add to cart
+      </button>
+        <button
+        onclick="update(2)">+2
+        </button>
+        <button 
+        onclick="update(3)">+3
+      </button>
+         <button 
+         onclick="update(4)">+4
+         </button>
+          <button 
+          onclick="update(5)">+5
+          </button>
+        <button 
+        onclick="resetfun()">reset cart
+      </button>
+        <button 
+        onclick="update(-1)">Remove from cart
+      </button>
+        <button
+         onclick="update(-2)">-2
+        </button>
+        <button 
+        onclick="update(-3)">-3
+      </button>
+
+
+
+
+
+
+        <script>
+            
+          
+            
+            
+            let a=0;
+            
+           
+              
+               function showfun(){
+                console.log("cart quantity:",a);
+            }
+           
+             function resetfun(){
+                 console.log("cart was resetted");
+                console.log("cart quantity:",a=0);
+            }
+             
+
+           
+           function update(value){
+            if(a+value>=10)
+            {
+               
+             alert('Cart was full')
+
+            }
+            else if(a+value<=0){
+             alert('Not enough products')
+            }
+             else
+            {
+              a=a+value;
+              console.log(`cart quantity:${a}`)
+            }
+          }
+
+
+
+            
+            
+
+
+          
+
+        </script>
+    </body>
+</html>
+

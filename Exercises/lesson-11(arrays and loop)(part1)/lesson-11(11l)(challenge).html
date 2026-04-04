@@ -1,0 +1,43 @@
+<html>
+<head>
+  
+  <title>lesson-11(11l)(challenge)</title>
+</head>
+<body>
+  
+  <script>
+    function minMax(nums)
+    {
+       let obj={
+            min:nums[0],
+            max:nums[0]
+          }
+      for(let i=0;i<nums.length;i++)
+      {
+      
+       
+        if(nums[i]<obj.min){
+          obj.min=nums[i];
+         
+        }
+        if(nums[i]>obj.max){
+           obj.max=nums[i];
+
+        }
+       
+      
+         
+
+        
+       
+      }
+      console.log(`min:${obj.min},max:${obj.max}`)
+    }
+  
+    minMax([2,91,36])
+
+ 
+  </script>
+  
+</body>
+</html>

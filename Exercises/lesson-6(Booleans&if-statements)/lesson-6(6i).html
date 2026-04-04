@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lesson-6(6h)</title>
+  </head>
+  <body>
+     <p>  in this lesson-6(6f) we have to create a random number using Math.random and save in the variable</p>
+    <p> in this lesson-6(6g) create a if statement and check if the random number is less than a 0.5 the its a head and or else its a tail</p>
+    <p> and in this lesson-6(6h) we just need to save the number in the result instead of displaying it</p>
+    <p> in this lesson-6(6i) we just need to craete a variable called guess in that you have to enter tail or head and check wherether the result and guess math if yes display you win other wise you lose </p>
+    <script>
+         let randomNumber=Math.random();
+         let result='';
+         const guess='Tails'
+      console.log(randomNumber);
+      if(randomNumber<0.5){
+        result='Heads';
+      }
+      else{
+        result='Tails';
+      }
+      if(result===guess){
+        console.log('you win!!!')
+      }
+      else{
+        console.log('you lose')
+      }
+
+      
+
+    </script>
+  </body>
+</html>

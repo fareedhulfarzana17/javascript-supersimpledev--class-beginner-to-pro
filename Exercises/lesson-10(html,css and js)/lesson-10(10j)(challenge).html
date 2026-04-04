@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      lesson-10(10i)(challenge)(calculatorproject)(final design)
+    </title>
+  </head>
+  <style>
+    .resultDisplayClass{
+      margin:20px;
+      color:white;
+    }
+    .numbut{
+      border-style: none;
+        width:60px;
+      text-align: center;
+      height:60px;
+      border-radius: 100px;
+      background-color: rgb(85, 85, 85);
+      color:white;
+      font-size:20px;
+      
+    
+
+    }
+    .calbut{
+       border-style: none;
+        width:60px;
+      text-align: center;
+      height:60px;
+      border-radius: 500px;
+      background-color: orange;
+      color:white;
+      font-size:20px;
+      
+      
+
+    }
+    .wholecalculator{
+      background-color:black ;
+      padding: 20px;
+    }
+    .result{
+      
+      width:250px;
+      border: 2px solid white;
+      border-radius: 150px;
+      font-size: 20px;
+    }
+    
+
+  </style>
+  <p>
+    in tis i justwant to separate the previose exercise but i dont want to do that 
+  </p>
+  <p>in this i have to design the calculator project from the 9j exercise using css</p>
+  <p> in this 9j we just need to display the result in the webpage instead of the displaying in the console and display the calculation if its stored in the localstorage after refresh</p>
+  <p>from the 7j exercise calculator project  i need to add localstorage using setItem() and getItem() </p>
+  <body>
+    <div class="wholecalculator">
+      <div class="result">
+    <p class="resultDisplayClass" ></p>
+    </div>
+    <p>
+     <button class="numbut" onclick="updateCalculation(1)">1</button>
+     <button class="numbut" onclick="updateCalculation(2)">2</button>
+    <button class="numbut" onclick="updateCalculation(3)">3</button>
+    <button class="calbut" onclick="updateCalculation(' + ')">+</button>
+     </p>
+     <p>
+     <button  class="numbut"onclick="updateCalculation(4)">4</button>
+     <button class="numbut" onclick="updateCalculation(5)">5</button>
+    <button class="numbut" onclick="updateCalculation(6)">6</button>
+     <button class="calbut" onclick="updateCalculation(' - ')">-</button>
+     </p>
+     <p>
+     <button class="numbut" onclick="updateCalculation(7)">7</button>
+     <button class="numbut"  onclick="updateCalculation(8)">8</button>
+    <button class="numbut" onclick="updateCalculation(9)">9</button>
+    <button class="calbut" onclick="updateCalculation(' * ')">*</button>
+     </p>
+     <p>
+     <button class="numbut" onclick="updateCalculation(0)">0</button>
+     <button class="numbut"  onclick="updateCalculation('.')">.</button>
+      <button class="numbut" onclick="resultDisplayfunction(eval(a)),localStorage.setItem('calculation',a)">=</button>
+      <button class="calbut" onclick="updateCalculation(' / ')">/</button>
+      
+     
+     
+     </p>
+    
+      <p>
+
+       <button class="numbut" onclick="resultDisplayfunction(a=''),localStorage.setItem('calculation',a)">Clear</button>
+    
+    </p>
+    </div>
+    
+     
+     
+  </body>
+  <script>
+    
+    let a=localStorage.getItem('calculation') ||'';
+    function updateCalculation(value){
+      a+=value;
+      resultDisplayfunction(a);
+      console.log(a);
+      resultDisplayfunction(a);
+
+      localStorage.setItem('calculation', a);
+      
+     
+    }
+    
+    function resultDisplayfunction(a){
+      let resultDisplayClassElement=document.querySelector('.resultDisplayClass');
+      resultDisplayClassElement.innerHTML=a;
+      
+      
+    }
+    resultDisplayfunction(a)
+    
+  </script>
+</html>

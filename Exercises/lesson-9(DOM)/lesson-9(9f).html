@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>
+      lesson-9(9f)
+    </title>
+  </head>
+  <body>
+    in this its a continue of 9d and when we enter the the output have to display too and using event object<br><br>
+    <p>in this its a copy of 9e just craete the function to the previos code but  already created in the previous code it self so skipping this</p>
+    <br>
+    <br>
+   <input class="inputClass" placeholder="Name" onkeydown="displayNameonkeydown(event)">
+   <button onclick="displayName()">Submit</button>
+   <p class="pClass"></p>
+  
+
+    <script>
+      let inputClassElement=document.querySelector('.inputClass');
+      let pClassElement=document.querySelector('.pClass');
+      function displayName(){
+        pClassElement.innerHTML=`You name is:${inputClassElement.value}`
+
+
+      }
+       function displayNameonkeydown(event){
+        if(event.key==='Enter'){
+          displayName();
+
+        }
+
+      }
+      
+
+    </script>
+  </body>
+</html>

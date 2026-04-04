@@ -1,0 +1,40 @@
+<html>
+<head>
+  
+  <title>lesson-11(11v)</title>
+</head>
+<body>
+  in this we are creating a fizzbuzz problem that is if  number divisible by 3 print 3 and divisble by 5  print buzz if both then fizzbuzz otherwise number where 1 to 20 in total
+  
+  <script>
+    
+    for(let i=1;i<=20;i++){
+      let result=i;
+      if(i%5===0&&i%3===0)
+      {
+        result='Fizzbuzz';;
+      }
+      else if(i%3===0)
+      {
+        result='Fizz';
+        
+      }
+      else if(i%5===0)
+      {
+        result='buzz';
+
+      }
+      
+      else
+      {
+        result=i;
+
+      }
+      console.log(result)
+    }
+   
+ 
+  </script>
+  
+</body>
+</html>

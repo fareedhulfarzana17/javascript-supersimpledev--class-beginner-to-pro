@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-8(8i)(challenge)</title>
+</head>
+<body>
+  <p>
+    in this we just need to update from the exercise 6i  that is to create the button and and work when the head or tail button clicks
+    
+
+  </p>
+  <button onclick="playGame('Heads')">Heads</button>
+  <button onclick="playGame('Tails')">tails</button>
+
+
+  <script>
+       
+        
+      
+    
+
+
+        
+      
+      
+      function playGame(guess){
+        let randomNumber=Math.random();
+         let result='';
+
+        console.log(randomNumber);
+     randomNumber<0.5?result='Heads':result='Tails';
+     console.log(`you chose:${guess}\ncomputer chose:${result}`)
+       result===guess?console.log('you win!!!'):console.log('you lose!!!');
+
+
+      }
+
+      
+
+    </script>
+	
+</body>
+</html>

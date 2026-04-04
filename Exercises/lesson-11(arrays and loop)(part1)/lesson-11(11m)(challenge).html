@@ -1,0 +1,53 @@
+<html>
+<head>
+  
+  <title>lesson-11(11m)(challenge)</title>
+</head>
+<body>
+  <p>in this i just need to update the privios code like it have display null when the array is empty and display the same number to both min and max when i have only 1 item in the array</p>
+  
+  <script>
+    function minMax(nums)
+    
+    {
+       let obj={
+            min:nums[0],
+            max:nums[0]
+          }
+
+          if(nums.length===0){
+          obj.min=null
+          obj.max=null
+
+        }
+      for(let i=0;i<nums.length;i++)
+      {
+      
+       
+        if(nums[i]<obj.min){
+          obj.min=nums[i];
+         
+        }
+        if(nums[i]>obj.max){
+           obj.max=nums[i];
+
+        }
+        
+        
+       
+      
+         
+
+        
+       
+      }
+      console.log(`min:${obj.min},max:${obj.max}`)
+    }
+  
+    minMax([7,8,9])
+
+ 
+  </script>
+  
+</body>
+</html>

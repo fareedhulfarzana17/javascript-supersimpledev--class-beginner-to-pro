@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>
+      lesson-9(9h)(challenge)
+    </title>
+  </head>
+  <body>
+    in this we just need to crete a input box and the para tag when we write in the text box that have to update on the display using event listener
+    <br>
+    <br>
+    <input onkeyup="onkeyupfunction()" class="inputClass" placeholder="Type Something!!">
+    <p class="pClass"></p>
+  
+
+    <script>
+      let pClassElement=document.querySelector('.pClass');
+      let inputClassElement=document.querySelector('.inputClass');
+      function onkeyupfunction(){
+        pClassElement.innerHTML=inputClassElement.value
+        
+      }
+
+
+      
+
+    </script>
+  </body>
+</html>

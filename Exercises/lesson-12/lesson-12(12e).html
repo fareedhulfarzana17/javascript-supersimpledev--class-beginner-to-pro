@@ -1,0 +1,27 @@
+<html>
+<head>
+  
+  <title>lesson-12(12e)</title>
+</head>
+<body>
+  <button class="addtocart" >Add to cart</button>
+  <p class="addedtext"></p>
+  <script>
+    let addtocartelement=document.querySelector(".addtocart");
+    let addedtextelement=document.querySelector(".addedtext");
+    addtocartelement.addEventListener('click',buttonchange);
+
+    function buttonchange(){
+      addedtextelement.innerHTML="Added"
+      setTimeout(()=>{
+        addedtextelement.innerHTML="";
+
+
+      },3000)
+
+    }
+   
+  </script>
+  
+</body>
+</html>

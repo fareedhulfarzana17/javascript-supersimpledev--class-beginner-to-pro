@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-7(7g)</title>
+</head>
+<body>
+  <p> in this we have to create a function called convertlength to converting miles to km</p>
+
+
+  <script>
+    function convertLength(length,from,to){
+      if(from==='miles' && to==='km'){
+        console.log((length*1.6)+'km');
+      }
+      else if(from==='km' && to==='miles'){
+        console.log((length/1.6)+'miles');
+      }
+      else if(from==='km' && to==='km')
+      {
+        console.log((length)+'km');
+      }
+      
+      else
+      {
+        console.log("enter a right input!!");
+      }
+
+    }
+    convertLength(12,'km','miles')
+    
+  </script>
+	
+</body>
+</html>

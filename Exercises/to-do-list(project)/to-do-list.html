@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>to-do-list</title>
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <p> to-do-list practice-1</p>
+    <input class="inputClasspractice-1"  placeholder="to-do name" >
+    <button onclick="addfunctionpractice1()">add</button>
+    <p> to-do-list practice-2</p>
+    <input class="inputClasspractice-2"  placeholder="to-do name" >
+    <input  class="dateclass" type="date">
+    <button onclick="addfunctionpractice2()">add</button>
+    <div class="divClass"></div>
+
+      <script>
+        let myArray1=[];
+          function addfunctionpractice1()
+            {
+              let inputClassElementpractice1=document.querySelector('.inputClasspractice-1');
+              let inputClassElementpractice1Value=inputClassElementpractice1.value;
+              let pClassElement=document.querySelector('.pClass');
+
+              myArray1.push(inputClassElementpractice1Value);
+
+              inputClassElementpractice1.value='';
+              
+            }
+//practice 2
+        let myArray2=[];
+
+          function addfunctionpractice2()
+            {
+              let inputClassElementpractice2=document.querySelector('.inputClasspractice-2');
+              let inputClassElementpractice2Value=inputClassElementpractice2.value;
+              let divClassElement=document.querySelector('.divClass');
+              let dateClassElement=document.querySelector('.dateclass');
+
+
+              myArray2.push(inputClassElementpractice2Value);
+
+              inputClassElementpractice2.value='';
+            
+              add()
+            }
+         
+          function add()
+            {
+              let sum=''
+                for( let i=0;i<myArray2.length;i++)
+                  {
+                    let divClassElement=document.querySelector('.divClass');
+                    let dateClassElement=document.querySelector('.dateclass');
+                    let dateclassvalue=dateClassElement.value;
+
+                    let add=myArray2[i];
+                    let html=`<p class="de">${add}
+                    ${dateclassvalue}
+                    <button onclick="
+                    myArray2.splice(${i},1)
+                    add()">Delete</button>
+                    </p>`;
+                    sum=sum+html;
+                  }
+              let divClassElement=document.querySelector('.divClass');
+              divClassElement.innerHTML=sum;
+           }
+           
+
+
+
+
+
+
+
+      </script>
+  </body>
+</html>

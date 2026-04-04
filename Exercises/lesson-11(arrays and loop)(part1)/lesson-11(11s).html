@@ -1,0 +1,40 @@
+<html>
+<head>
+  
+  <title>lesson-11(11s)</title>
+</head>
+<body>
+  
+  <script>
+    function removeegg(foods){
+      let result=[];
+      let eggs=[];
+     
+      
+      for(let i=0;i<foods.length;i++)
+      {
+       
+        if(foods[i]==='egg')
+        {
+          eggs.push(foods[i])
+          if(eggs.length<=2)
+          {
+          continue;
+           }
+          }
+           result.push(foods[i]);
+        
+           
+       }
+       console.log(result);
+      
+     
+
+    }
+    removeegg(['ham','egg','tomato','white','egg','apple','egg','ice','egg'])
+   
+ 
+  </script>
+  
+</body>
+</html>

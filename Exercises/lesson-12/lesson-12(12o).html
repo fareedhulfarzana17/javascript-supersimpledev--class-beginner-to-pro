@@ -1,0 +1,41 @@
+<html>
+<head>
+  
+  <title>lesson-12(12o)</title>
+</head>
+<body>
+  
+ <script>
+  
+  function removeegg(array){
+    let newarray=[];
+  let eggremoved=0;
+    newarray=array.filter((value)=>{
+      if(value==='egg'&& eggremoved<2){
+        eggremoved+=1
+        
+       return false;
+
+      }
+      
+      
+      return true;
+      
+    
+      
+    })
+   
+    console.log(newarray);
+    console.log(newarray);
+    
+
+    
+
+  }
+   removeegg(['egg','orange','phone','je','apple','egg','egg','egg'])
+  
+  
+   </script>  
+  
+</body>
+</html>

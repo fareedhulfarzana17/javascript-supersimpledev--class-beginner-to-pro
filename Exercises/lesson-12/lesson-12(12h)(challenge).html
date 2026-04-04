@@ -1,0 +1,50 @@
+<html>
+<head>
+  
+  <title>lesson-12(12h)(challenge)</title>
+</head>
+<body>
+  <button class="add">Add</button>
+  <button class="remove" >remove</button>
+ <script>
+ let number=2;
+ let addElement=document.querySelector('.add');
+ let removeElement=document.querySelector('.remove');
+ 
+  addElement.addEventListener("click",()=>{
+    
+    number+=1
+
+  })
+   removeElement.addEventListener("click",()=>{
+    
+    number-=1
+
+  })
+  
+ 
+    
+    setInterval(()=>{
+      if(document.title==="App"){
+        document.title=`(${number}) new messages`
+      }
+      else{
+        document.title="App"
+      }
+       
+    
+      
+
+    },1000);
+     
+    
+  
+    
+    
+
+  
+   
+  </script>
+  
+</body>
+</html>

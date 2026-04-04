@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>
+      lesson-9(9c)
+    </title>
+  </head>
+  <body>
+    in this i just need to craete two buttons head and tails and when user click on specific button the  text has to apper below the button you choose this partical heads or tails like that
+    <br><br>
+
+    <button class="headsClass" onclick="clickfunction('HEADS')">HEADS</button>
+    <button class="tailsClass" onclick="clickfunction('TAILS')">TAILS</button>
+    <p class="result"></p>
+    
+   
+    
+  
+
+    <script>
+      let headsClassElement=document.querySelector('.headsClass');
+      let tailsClassElement=document.querySelector('.tailsClass');
+      let resultElement=document.querySelector('.result');
+      function clickfunction(user){
+        if(user===headsClassElement.innerHTML){
+          resultElement.innerHTML=` you chose:${headsClassElement.innerHTML}`
+        }
+        else{
+          resultElement.innerHTML=` you chose:${tailsClassElement.innerHTML}`
+
+        }
+
+      }
+      
+
+
+      
+
+    </script>
+  </body>
+</html>

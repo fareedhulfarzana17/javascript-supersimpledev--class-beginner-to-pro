@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-8(8e)</title>
+</head>
+<body>
+  <p> in this i have onw doubt object is reference so in here i have called the object with its property too but only one i can able to get the object's two property at the same time  like using && in the if condition to take both name and price so i did like this
+
+
+
+
+
+
+
+    and in this exercise i need to check is the two product have the same name or price  if it is display true otherwise false!!
+    
+
+  </p>
+
+
+  <script>
+    let product1={
+      name:'apple',
+      price:10
+    };
+    let product2={
+      name:'apple',
+      price:10
+    };
+     
+     function isSameProduct(){
+      if(product1.name===product2.name)
+     {
+      console.log('true')
+     }
+     else if(product1.price===product2.price){
+      console.log('price is same')
+     }
+     else{
+      console.log('false')
+     }
+
+    };
+    isSameProduct();
+    
+   
+  </script>
+	
+</body>
+</html>

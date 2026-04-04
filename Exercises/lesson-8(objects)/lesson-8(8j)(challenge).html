@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-8(8j)(challenge)</title>
+</head>
+<body>
+  <p>
+    in tis i just need to update te exercise called 8i and in this exercise i just need to update by adding the object score with wins and losses in the game and display in the console
+    
+
+  </p>
+
+<button onclick="playGame('Heads')">Heads</button>
+  <button onclick="playGame('Tails')">tails</button>
+
+
+  <script>
+       
+        
+      
+    
+
+
+        
+      let score={
+        wins:0,
+        losses:0
+      };
+      
+      function playGame(guess){
+        let randomNumber=Math.random();
+         let result='';
+
+        console.log(randomNumber);
+     randomNumber<0.5?result='Heads':result='Tails';
+     console.log(`you chose:${guess}\ncomputer chose:${result}`)
+     if(result===guess){
+      console.log('you win!!!')
+      console.log(`winScore:${score.wins+=1}`)
+       console.log(`lossScore:${score.losses}`)
+     }
+     else{
+      console.log('you lose!!!')
+      console.log(`winScore:${score.wins}`)
+      console.log(`lossScore:${score.losses+=1}`)
+
+     }
+      
+
+
+      }
+
+      
+
+    </script>
+	
+</body>
+</html>

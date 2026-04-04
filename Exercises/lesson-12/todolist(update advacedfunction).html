@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>to-do-list-with-css(update advacedfunction)</title>
+    //in here we are using foreach methode to loo through an array instead of for loop
+  </head>
+  <style>
+   
+    .inputClasspractice-2,.dateclass,.inputbutton{
+      display:inline-grid;
+      grid-template-columns: 150px 30px 10px;
+      margin:10px;
+      padding:15px;
+      align-items: center;
+    
+     
+    }
+      .inputbutton{
+        text-align: center;
+        background-color: green;
+        color:white;
+        border-style:none;
+
+      }
+      
+    .date,.add,.butclass{
+       display:inline-grid;
+      grid-template-columns: 150px 30px 10px;
+      margin:10px;
+      padding:10px;
+      align-items: center;
+      
+      
+
+    }
+      .butclass{
+        text-align: center;
+        background-color: red;
+        color:white;
+        border-style:none;
+        padding:15px;
+        margin-left:15px;
+        
+
+      }
+
+  </style>
+  <body>
+    <p> to-do-list practice-with-css-2</p>
+    <input class="inputClasspractice-2"  placeholder="to-do name" >
+    <labet for="start"></labet>
+    <input  class="dateclass" type="date" name="start" value="2025-2-2" >
+    <button onclick="addfunctionpractice2()" class="inputbutton">add</button>
+    <div class="divClass"></div>
+    <script>
+    //practice 2
+        let myArray2=['do work'];
+        add()
+        
+
+          function addfunctionpractice2()
+            {
+              let inputClassElementpractice2=document.querySelector('.inputClasspractice-2');
+              let inputClassElementpractice2Value=inputClassElementpractice2.value;
+              let divClassElement=document.querySelector('.divClass');
+              let dateClassElement=document.querySelector('.dateclass');
+
+
+              myArray2.push(inputClassElementpractice2Value);
+
+              inputClassElementpractice2.value='';
+            
+              add()
+            }
+         
+          function add()
+            {
+              let sum=''
+
+              myArray2.forEach(function(add,index)
+              
+              {
+                
+                    let divClassElement=document.querySelector('.divClass');
+                    let dateClassElement=document.querySelector('.dateclass');
+                    let dateclassvalue=dateClassElement.value;
+
+                   
+                    let html=`<p class="de">
+                      <div class="add">${add}</div>
+                      <div class="date">${dateclassvalue}</div>
+                      <button onclick="
+                      myArray2.splice(${index},1)
+                      add()"class="butclass">Delete</button>
+                      </p>`;
+                    sum=sum+html;
+                  
+              })
+             
+                // for( let i=0;i<myArray2.length;i++)
+                //   {
+                //     let divClassElement=document.querySelector('.divClass');
+                //     let dateClassElement=document.querySelector('.dateclass');
+                //     let dateclassvalue=dateClassElement.value;
+
+                //     let add=myArray2[i];
+                //     let html=`<p class="de">
+                //       <div class="add">${add}</div>
+                //       <div class="date">${dateclassvalue}</div>
+                //       <button onclick="
+                //       myArray2.splice(${i},1)
+                //       add()"class="butclass">Delete</button>
+                //       </p>`;
+                //     sum=sum+html;
+                //   }
+              let divClassElement=document.querySelector('.divClass');
+              divClassElement.innerHTML=sum;
+           }
+
+
+    </script>
+  </body>
+</html>

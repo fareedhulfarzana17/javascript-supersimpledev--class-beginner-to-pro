@@ -1,0 +1,63 @@
+<html>
+<head>
+  
+  <title>lesson-12(12i)(challenge)</title>
+</head>
+<body>
+  <button class="add">Add</button>
+  <button class="remove" >remove</button>
+ <script>
+ let number=2;
+ let addElement=document.querySelector('.add');
+ let removeElement=document.querySelector('.remove');
+
+
+   setInterval(()=>
+   {
+    if(number<=0)
+    {
+      document.title="App"
+    }
+    else
+    {
+
+        if(document.title==="App")
+        {
+          document.title=`(${number}) new messages`
+        }
+        else
+        {
+          document.title="App"
+        
+        }
+      }},1000)
+    
+     
+
+ 
+ 
+  addElement.addEventListener("click",()=>{
+    
+    number+=1
+
+  })
+   removeElement.addEventListener("click",()=>{
+    if(number>0){
+      number-=1
+
+    }
+    
+    
+
+  })
+  
+ 
+    
+   
+
+  
+   
+  </script>
+  
+</body>
+</html>

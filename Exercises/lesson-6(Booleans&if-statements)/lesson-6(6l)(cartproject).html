@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lesson-6(6k)(cartproject-updated)</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+      <p>in this lesson-6(6k) we need to copy paste the 5k lesson to update the cart project here and in this if add more thean 10 it will popup cart id full doest allow to add later and also it will check like before 10 coming like if already cart quantity 7 if i add 3+ then it does allow to add to avoid cart full will get 10</p>
+      <p> in this lesson-6(6l) if the user click remove or-1 like that lessing product even after 0 then it will display nt enough products</p>
+     
+      <h1> in here simply use shartcuts in a=a-1 instead --,-+=</h1>
+
+        <h1>iam so proud i done it by my self in sake of allah</h1>
+        <h1>cart quantity</h1>
+        <button onclick="showfun()">show quantity</button>
+        <button 
+        onclick="if(a>=9){
+          alert('cart was full')
+        }
+        else{
+          addfun()
+        }
+        ">
+        add to cart</button>
+        <button  onclick="if(a>=8){alert('cart was full')}
+        else{twofun()};">+2</button>
+        <button onclick="if(a>=7){alert('cart was full')}
+        else{threefun()};">+3</button>
+         <button onclick="if(a>=6){alert('cart was full')}
+         else{fourfun()};">+4</button>
+          <button onclick="if(a>=5){alert('cart was full')}
+          else{fivefun()};">+5</button>
+        <button onclick="resetfun()">reset cart</button>
+        <button onclick="if(a<=0){alert('Not enough products')
+        }
+      else{removefun()};">Remove from cart</button>
+        <button onclick="if(a<=1){alert('Not enough products')
+        }
+      else{removetwoitemfun()};">-2</button>
+        <button onclick="if(a<=2){alert('Not enough products')
+        }
+      else{removethreeitemfun()};">-3</button>
+
+
+
+
+
+
+        <script>
+            
+          
+            
+            
+            let a=0;
+            
+           
+              
+               function showfun(){
+                console.log("cart quantity:",a);
+            }
+             function addfun(){
+                console.log("cart quantity:",a=a+1);
+            }
+             function twofun(){
+                console.log("cart quantity:",a=a+2);
+            }
+             function threefun(){
+                console.log("cart quantity:",a=a+3);
+            }
+            function fourfun(){
+                console.log("cart quantity:",a+=4);
+            }
+            function fivefun(){
+                console.log("cart quantity:",a+=5);
+            }
+             function resetfun(){
+                 console.log("cart was resetted");
+                console.log("cart quantity:",a=0);
+            }
+              function removefun(){
+                console.log("cart quantity:",a--);
+            }
+            function removetwoitemfun(){
+                console.log("cart quantity:",a-=2);
+            }
+             function removethreeitemfun(){
+                console.log("cart quantity:",a-=3);
+            }
+
+            
+
+
+          
+
+        </script>
+    </body>
+</html>
+

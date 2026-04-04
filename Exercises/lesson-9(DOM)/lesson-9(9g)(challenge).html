@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>lesson-9(9g)(challenge)(dom-projects-update)</title>
+    
+  </head>
+  <style>
+      .css-button{
+        border-style: none;
+        border-radius: 50px;
+        background-color: black;
+        color:white;
+        padding:15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        cursor: pointer;
+        font-weight:bold;
+      }
+      .aftersubscribed{
+        background-color: rgb(233, 228, 228);
+        color:black;
+        
+      }
+
+    </style>
+  <body>
+    <p> in this exercise the issue in the amazon calcultor is  calculating the decimal number in inaccurate value like 7.99 into with shipping 17.99000000000008 but we want the exact value for that iam using the cents method by multiply it with 100 and floor it using math.florr() and while getting the answer i have divided it with the hundred to get the correct answer</p><br>
+    <h3>Youtube Subscribe Button</h3>
+    <button class="js-button  css-button" onclick="subscribed()">Subscribe</button>
+    <h3>rock paper scissors game!</h3>
+    <a href="Rock-paper-scissors.html">click here!</a>
+    <h3>
+      Amazon Shipping Calculator <br>
+      Orders under $40=+$10 Shipping<br>
+      Orders over $40=FREE Shipping
+    </h3>
+    <input class="amazoninputClass" placeholder="Cost of orders" onkeydown="handlekeydownfunction(event)"
+    >
+    <button onclick="amazonCalculator()">Calculate</button>
+    <h3 class="amazonResult"></h3>
+
+
+
+
+    <script>
+      function handlekeydownfunction(event)
+      {
+        if(event.key==='Enter')
+        {
+          amazonCalculator()
+        }
+      };
+
+      //amazon function
+      function amazonCalculator(){
+        
+      let amazoninputClassElement=document.querySelector('.amazoninputClass');
+      let inputvalue=amazoninputClassElement.value
+       let amazonResultElement=document.querySelector('.amazonResult');
+
+      if(inputvalue<=40){
+        let newvalue=Math.floor((Number(inputvalue)+10)*100);
+
+        amazonResultElement.innerText=`$${newvalue/100} with shipping`;
+       
+      }
+      else{
+         amazonResultElement.innerText=`$${amazoninputClassElement.value} with FREE shipping`;
+
+      };
+    };
+      
+    //youtube subscribe function
+
+      function subscribed()
+      {
+              let buttonElement=document.querySelector(".js-button");
+
+              if(buttonElement.innerText==="Subscribe"){
+                buttonElement.innerText="Subscribed";
+                buttonElement.classList.add('aftersubscribed');
+              }
+              else{
+                buttonElement.innerText="Subscribe";
+                buttonElement.classList.remove('aftersubscribed');
+              }
+
+              
+              
+
+              
+      
+              
+        }
+    </script>
+  </body>
+</html>

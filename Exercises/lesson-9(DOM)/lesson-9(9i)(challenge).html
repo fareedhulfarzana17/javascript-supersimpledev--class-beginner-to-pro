@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-9(9i)(challenge)(cart-update)</title>
+</head>
+<body>
+  <p>
+    in this 9i we have to update the cartquantity project where just display the cartquantity in the webpage instead of displaying the console! i did it!!
+
+  </p>
+  <p> in this exercise i need to update from the previous exercise where it have to use the early return to stop the function if its true using return</p>
+  <p> in this we have use return to get early return to avoid all code to run by using id else conditions</p>
+  <p>i have figured out this is working</p>
+
+<h1>cart quantity</h1>
+        <button onclick="showfun()">show quantity</button>
+        <button 
+        onclick="update(1)">add to cart
+      </button>
+        <button
+        onclick="update(2)">+2
+        </button>
+        <button 
+        onclick="update(3)">+3
+      </button>
+         <button 
+         onclick="update(4)">+4
+         </button>
+          <button 
+          onclick="update(5)">+5
+          </button>
+        <button 
+        onclick="resetfun()">reset cart
+      </button>
+        <button 
+        onclick="update(-1)">Remove from cart
+      </button>
+        <button
+         onclick="update(-2)">-2
+        </button>
+        <button 
+        onclick="update(-3)">-3
+      </button>
+      <p class="displayCartQuantityClass"></p>
+
+
+
+
+
+
+        <script>
+            
+          
+            let displayCartQuantityClassElement=document.querySelector('.displayCartQuantityClass');
+            
+            let a=0;
+            
+           
+              
+               function showfun(){
+                displayCartQuantity(a)
+            }
+           
+             function resetfun(){
+                 
+
+                a=0;
+                displayCartQuantity(a);
+                alert("cart was resetted",a);
+            }
+             
+
+           
+           function update(value){
+            if(a+value>=10)
+            {
+               
+             alert('Cart was full');
+              return;
+            };
+            if(a+value<=0){
+             alert('Not enough products');
+             return;
+            };
+            
+              a=a+value;
+              
+              displayCartQuantity(a);
+              
+            
+          };
+          function displayCartQuantity(a){
+            displayCartQuantityClassElement.innerHTML=`cart quantity:${a}`
+
+          }
+
+
+
+            
+            
+
+
+          
+
+        </script>
+    </body>
+</html>
+

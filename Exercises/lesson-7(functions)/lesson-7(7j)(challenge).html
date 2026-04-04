@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-7(7j)(challenge)</title>
+</head>
+<body>
+  <p>
+    in this i need to use function in the 5r project calculator code but i ddint understand where i need to do like there is not need in function for my code
+
+  </p>
+  <p> yes in this i have created the function for the calculator project</p>
+
+<p>
+     <button onclick="updateCalculation(1)">1</button>
+     <button  onclick="updateCalculation(2)">2</button>
+    <button  onclick="updateCalculation(3)">3</button>
+     </p>
+     <p>
+     <button onclick="updateCalculation(4)">4</button>
+     <button  onclick="updateCalculation(5)">5</button>
+    <button  onclick="updateCalculation(6)">6</button>
+     </p>
+     <p>
+     <button onclick="updateCalculation(7)">7</button>
+     <button  onclick="updateCalculation(8)">8</button>
+    <button  onclick="updateCalculation(9)">9</button>
+     </p>
+     <p>
+     <button  onclick="updateCalculation(0)">0</button>
+     <button  onclick="updateCalculation(' + ')">+</button>
+      <button  onclick="updateCalculation(' - ')">-</button>
+     </p>
+     <p>
+     <button  onclick="updateCalculation(' * ')">*</button>
+     <button  onclick="updateCalculation(' / ')">/</button>
+      <button  onclick="console.log(eval(calculation))">=</button>
+     </p>
+     <p> <button  onclick="updateCalculation('.')">.</button>
+      </p>
+      <p>
+
+       <button  onclick="console.log(calculation='')">reset</button>
+    
+    </p>
+     
+     
+  </body>
+  <script>
+    let calculation='';
+    function updateCalculation(value){
+      calculation+=value;
+      console.log(calculation);
+    }
+    
+  </script>
+</html>

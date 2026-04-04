@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-8(8k)(challenge)</title>
+</head>
+<body>
+  <p>
+    in this i just need to update the 8j head or tail game code with lusing the local storage in this 
+    </p>
+    <p> yeah in this i need to add local storage with also using JSON to convert ot wit string for score and i have did it with the help of chatgpt and learned it to</p>
+    <p>done!!</p>
+
+  <button onclick="playGame('Heads')">Heads</button>
+  <button onclick="playGame('Tails')">tails</button>
+
+
+  <script>
+       
+        
+      
+    
+
+
+        
+      let score=JSON.parse(localStorage.getItem('localscore'))||
+      {
+        wins:0,
+        losses:0
+      };
+      
+      function playGame(guess){
+        let randomNumber=Math.random();
+         let result='';
+
+        console.log(randomNumber);
+     randomNumber<0.5?result='Heads':result='Tails';
+     console.log(`you chose:${guess}\ncomputer chose:${result}`)
+     if(result===guess){
+      console.log('you win!!!')
+      console.log(`winScore:${score.wins+=1}`)
+       console.log(`lossScore:${score.losses}`)
+
+     }
+     else{
+      console.log('you lose!!!')
+      console.log(`winScore:${score.wins}`)
+      console.log(`lossScore:${score.losses+=1}`)
+
+     }
+     localStorage.setItem('localscore',JSON.stringify(score))
+      
+
+
+      }
+
+      
+
+    </script>
+	
+</body>
+</html>
