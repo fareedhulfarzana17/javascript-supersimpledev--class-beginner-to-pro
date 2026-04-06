@@ -1,6 +1,6 @@
 const products=[
   {
-    image:"images/products-img/product1.png",
+    image:"images/products-img/athletic-cotton-socks-6-pairs.jpg",
     name:"Black and Gray Athletic Cotton Socks - 6 Pairs",
     rating:
     {
@@ -13,7 +13,7 @@ const products=[
 
   },
   {
-    image:"images/products-img/product2.png",
+    image:"images/products-img/intermediate-composite-basketball.jpg",
     name:"Intermediate Size Basketball",
     rating:
     {
@@ -26,7 +26,7 @@ const products=[
 
   },
   {
-    image:"images/products-img/product3.png",
+    image:"images/products-img/adults-plain-cotton-tshirt-2-pack-teal.jpg",
     name:"Adults Plain Cotton T-Shirt - 2 Pack",
     rating:
     {
